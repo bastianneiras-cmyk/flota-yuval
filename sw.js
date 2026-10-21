@@ -1,5 +1,5 @@
 // Service worker: cachea la app (no la API). Subir VERSION en cada publicación.
-const VERSION = 'flota-v3.0.0';
+const VERSION = 'flota-v3.0.1';
 const SHELL = ['./', 'index.html', 'styles.css?v=3.0.0', 'app.js?v=3.0.0', 'config.js?v=3.0.0', 'manifest.json',
   'icon-192.png', 'icon-512.png', 'apple-touch-icon.png', 'favicon-32.png'];
 
@@ -17,7 +17,8 @@ self.addEventListener('fetch', (e) => {
   if (url.hostname.endsWith('script.google.com') || url.hostname.endsWith('googleusercontent.com')) return; // API: siempre red
   if (url.origin === location.origin) {
     // App: red primero (para tomar actualizaciones), caché si no hay señal
-    e.respondWith(fetch(req).then((r) => {
+    // Revalida siempre con el servidor (las versiones nuevas se ven al abrir la app)
+    e.respondWith(fetch(req, { cache: 'no-cache' }).then((r) => {
       if (r.ok) { const cp = r.clone(); caches.open(VERSION).then((c) => c.put(req, cp)); }
       return r;
     }).catch(() => caches.match(req, { ignoreSearch: false }).then((r) => r || caches.match('index.html'))));
