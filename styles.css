@@ -288,3 +288,53 @@ body.con-barra main { padding-bottom: calc(var(--nav-h) + var(--safe-b) + 90px);
 .skel { background: linear-gradient(90deg, var(--chip) 25%, var(--linea) 37%, var(--chip) 63%); background-size: 400% 100%;
   animation: sk 1.2s ease infinite; border-radius: var(--r); min-height: 92px; }
 @keyframes sk { 0% { background-position: 100% 50%; } 100% { background-position: 0 50%; } }
+
+/* ── Fase 3 / 4 ── */
+a.btn { text-decoration: none; color: inherit; }
+button.alerta { width: 100%; text-align: left; }
+.chips.two { display: grid; grid-template-rows: repeat(2, auto); grid-auto-flow: column; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.chips.two::-webkit-scrollbar { display: none; }
+.sheet-f .btn { flex: 1; }
+.pasos { display: flex; gap: 6px; margin-bottom: 14px; }
+.pasos button { flex: 1; text-align: left; font-size: 11px; font-weight: 700; color: var(--txt-2); text-transform: uppercase; letter-spacing: .3px; }
+.pasos button i { display: block; height: 5px; border-radius: 3px; background: var(--linea); margin-bottom: 6px; }
+.pasos button.ok i { background: var(--carbon); }
+[data-theme="dark"] .pasos button.ok i { background: #8A9096; }
+.pasos button.on i { background: var(--rojo); }
+.pasos button.on { color: var(--txt); }
+.ck-sec { background: var(--card); border-radius: var(--r); box-shadow: var(--sombra); margin-top: 10px; overflow: hidden; }
+.ck-h { display: flex; align-items: center; gap: 8px; padding: 8px 10px 8px 14px; }
+.ck-tg { flex: 1; text-align: left; min-height: 40px; }
+.ck-row { padding: 10px 14px; border-top: 1px solid var(--linea); }
+.ck-row .nm { font-size: 14px; margin-bottom: 8px; }
+.ck-btns { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+.ck-btns button { height: 42px; border-radius: 10px; background: var(--chip); font-weight: 700; font-size: 13px; color: var(--txt-2); }
+.ck-btns button.on[data-r="OK"] { background: var(--verde); color: #fff; }
+.ck-btns button.on[data-r="OBS"] { background: var(--amarillo); color: #1D1F21; }
+.ck-btns button.on[data-r="REP"] { background: var(--rojo); color: #fff; }
+.ck-btns button.on[data-r="N/A"] { background: var(--carbon); color: #fff; }
+.ck-row input { margin-top: 8px; min-height: 42px; }
+.slots { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.slot { background: var(--card); border-radius: 12px; box-shadow: var(--sombra); overflow: hidden; display: block; text-decoration: none; color: inherit; }
+.slot .t { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; padding: 8px 10px 6px; color: var(--txt-2); }
+.slot .ph { height: 120px; width: 100%; display: grid; place-items: center; background: var(--chip); color: var(--txt-2); font-weight: 600; font-size: 14px; overflow: hidden; }
+.slot .ph img { width: 100%; height: 120px; object-fit: cover; display: block; }
+.slot input { border: 0; border-top: 1px solid var(--linea); border-radius: 0; min-height: 42px; font-size: 14px; }
+.firma-prev { width: 100%; height: 84px; margin-top: 8px; border-radius: 10px; border: 1.5px dashed var(--linea); display: grid; place-items: center; color: var(--txt-2); font-weight: 600; background: #fff; }
+[data-theme="dark"] .firma-prev { background: #F3F4F5; color: #555; }
+.firma-prev img { max-height: 78px; max-width: 100%; }
+.firma-pad { background: #fff; border-radius: 14px; position: relative; height: min(52vh, 360px); box-shadow: var(--sombra); overflow: hidden; }
+.firma-pad canvas { width: 100%; height: 100%; display: block; touch-action: none; }
+.firma-linea { position: absolute; left: 24px; right: 24px; bottom: 56px; border-top: 1.5px dashed #9AA1A8; font-size: 11px; color: #9AA1A8; padding-top: 4px; pointer-events: none; }
+.hero { background: var(--carbon); color: #fff; border-radius: var(--r); padding: 16px; }
+.hero .pat { font-family: var(--f-tit); font-size: 34px; font-weight: 800; line-height: 1; }
+.vbars { display: flex; align-items: flex-end; gap: 6px; height: 170px; }
+.vbars .c { flex: 1; min-width: 0; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; }
+.vbars .c i { width: 100%; max-width: 38px; background: var(--rojo); border-radius: 5px 5px 0 0; }
+.vbars .c b { font-size: 10px; color: var(--txt-2); white-space: nowrap; }
+.vbars .c span { font-size: 11px; font-weight: 600; color: var(--txt-2); text-transform: capitalize; }
+.bars .row span:first-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row2 > * { min-width: 0; }
+.inp { min-width: 0; max-width: 100%; }
+input[type="date"].inp, input[type="datetime-local"].inp { width: 100%; display: block; }
+.sheet-b { overflow-x: hidden; }
