@@ -49,7 +49,7 @@ button { cursor: pointer; border: 0; background: none; padding: 0; }
   position: sticky; top: 0; z-index: 20; background: var(--carbon); color: #fff;
   padding: calc(var(--safe-t) + 8px) 12px 8px; display: flex; align-items: center; gap: 10px;
 }
-.top img { width: 38px; height: 38px; border-radius: 8px; }
+.top img { width: 38px; height: 38px; object-fit: contain; }
 .brand { flex: 1; line-height: 1; min-width: 0; }
 .brand b { font-family: var(--f-tit); font-weight: 800; font-size: 20px; letter-spacing: .3px; display: block; }
 .brand span { font-family: var(--f-tit); font-weight: 500; font-size: 13px; letter-spacing: 3px; color: #C9CDD1; }
@@ -273,7 +273,7 @@ body.con-barra main { padding-bottom: calc(var(--nav-h) + var(--safe-b) + 90px);
 /* ── Login ── */
 .login { min-height: 100%; background: var(--carbon); color: #fff; display: flex; flex-direction: column; align-items: center;
   padding: calc(var(--safe-t) + 40px) 24px calc(var(--safe-b) + 24px); }
-.login img { width: 96px; height: 96px; border-radius: 22px; }
+.login img { width: 96px; height: 96px; object-fit: contain; }
 .login h1 { font-family: var(--f-tit); font-weight: 800; font-size: 32px; margin: 16px 0 0; letter-spacing: .5px; }
 .login p.s { font-family: var(--f-tit); letter-spacing: 4px; color: #C9CDD1; margin: 2px 0 24px; }
 .login p.s i { color: var(--rojo); font-style: normal; }

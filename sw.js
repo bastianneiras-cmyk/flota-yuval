@@ -1,7 +1,7 @@
 // Service worker: cachea la app (no la API). Subir VERSION en cada publicación.
-const VERSION = 'flota-v2.0.0';
-const SHELL = ['./', 'index.html', 'styles.css?v=2.0.0', 'app.js?v=2.0.0', 'config.js?v=2.0.0', 'manifest.json',
-  'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png', 'icons/emblema.png', 'icons/favicon-32.png'];
+const VERSION = 'flota-v2.1.0';
+const SHELL = ['./', 'index.html', 'styles.css?v=2.1.0', 'app.js?v=2.1.0', 'config.js?v=2.1.0', 'manifest.json',
+  'icon-192.png', 'icon-512.png', 'apple-touch-icon.png', 'favicon-32.png'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
