@@ -413,7 +413,7 @@ input[type="date"].inp, input[type="datetime-local"].inp { width: 100%; display:
 /* ═══════════════════ ESCRITORIO ═══════════════════ */
 @media (min-width: 1024px) {
   :root { --side: 236px; }
-  body { padding-left: var(--side); }
+  body.con-menu { padding-left: var(--side); } /* solo con sesión iniciada: el ingreso usa todo el ancho */
   .top { padding: 10px 24px; }
   .top img { width: 34px; height: 34px; }
   .offbar { top: 54px; }
