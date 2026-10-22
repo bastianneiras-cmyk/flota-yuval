@@ -475,3 +475,16 @@ input[type="date"].inp, input[type="datetime-local"].inp { width: 100%; display:
 .tabla td.w { white-space: normal; min-width: 170px; }
 #verBar { background: #FDE8E8; color: var(--rojo-osc); }
 [data-theme="dark"] #verBar { background: #3A2224; color: #FF8A8D; }
+
+/* ═══════════════════ v3.2 ═══════════════════ */
+#btnAct.girando svg { animation: g 1.2s linear infinite; }
+.tag.brd { background: #E8EAF0; color: #4A5060; }
+[data-theme="dark"] .tag.brd { background: #33363D; color: #C9CDD6; }
+.borr-l { align-items: center; }
+.borr-l .bd { text-align: left; background: none; border: 0; padding: 0; color: inherit; font: inherit; flex: 1; min-width: 0; cursor: pointer; }
+.borr-l .rt { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+button.link { background: none; border: 0; padding: 0; color: var(--rojo); font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
+.cond-g { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 10px; }
+.cond-sug { margin: 6px 2px 0; }
+.login-act { margin-top: 22px; display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; color: #C9CDD1; font: inherit; font-size: 13px; cursor: pointer; padding: 8px; }
+.login-act svg { width: 16px; height: 16px; }
