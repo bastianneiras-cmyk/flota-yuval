@@ -1,6 +1,6 @@
 // Service worker: cachea la app (no la API). Subir VERSION en cada publicación.
-const VERSION = 'flota-v3.3.1';
-const SHELL = ['./', 'index.html', 'styles.css?v=3.3.1', 'app.js?v=3.3.1', 'config.js?v=3.3.1', 'manifest.json',
+const VERSION = 'flota-v3.4.0';
+const SHELL = ['./', 'index.html', 'styles.css?v=3.4.0', 'app.js?v=3.4.0', 'config.js?v=3.4.0', 'manifest.json',
   'icon-192.png', 'icon-512.png', 'apple-touch-icon.png', 'favicon-32.png'];
 
 self.addEventListener('install', (e) => {
